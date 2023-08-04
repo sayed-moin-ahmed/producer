@@ -1,0 +1,63 @@
+---
+project:
+  root: file:///home/sayed/github_repo/producer/
+  dekorateInputDir: null
+  dekorateOutputDir: META-INF/dekorate
+  dekorateMetaDir: ../.dekorate
+  buildInfo:
+    name: demo
+    version: 0.0.1-SNAPSHOT
+    packaging: jar
+    buildTool: maven
+    buildToolVersion: 3.6.3
+    outputFile: file:///home/sayed/github_repo/producer/target/demo-0.0.1-SNAPSHOT.jar
+    classOutputDir: file:///home/sayed/github_repo/producer/target/classes/
+    resourceDir: file:///home/sayed/github_repo/producer/target/classes/
+  scmInfo:
+    root: file:///home/sayed/github_repo/producer/
+    branch: develop
+    commit: 1b902abec416e6502a46cedd6113f5ad80289376
+    remote:
+      '[remote "origin"]': https://github.com/sayed-moin-ahmed/producer.git
+partOf: null
+name: demo
+version: 0.0.1-SNAPSHOT
+deploymentKind: Deployment
+workingDir: null
+serviceAccount: null
+serviceType: ClusterIP
+imagePullPolicy: IfNotPresent
+deploymentStrategy: None
+rollingUpdate: null
+livenessProbe:
+  httpActionPath: /actuator/health/liveness
+  execAction: null
+  tcpSocketAction: null
+  grpcAction: null
+  initialDelaySeconds: null
+  periodSeconds: null
+  timeoutSeconds: null
+  successThreshold: null
+  failureThreshold: null
+readinessProbe:
+  httpActionPath: /actuator/health/readiness
+  execAction: null
+  tcpSocketAction: null
+  grpcAction: null
+  initialDelaySeconds: null
+  periodSeconds: null
+  timeoutSeconds: null
+  successThreshold: null
+  failureThreshold: null
+startupProbe: null
+requestResources: null
+limitResources: null
+autoDeployEnabled: false
+replicas: 1
+ingress:
+  host: null
+  ingressClassName: null
+  targetPort: null
+  expose: null
+  tlsSecretName: null
+headless: false

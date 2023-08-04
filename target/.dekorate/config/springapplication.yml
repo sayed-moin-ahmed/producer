@@ -1,0 +1,21 @@
+---
+project:
+  root: file:///home/sayed/github_repo/producer/
+  dekorateInputDir: null
+  dekorateOutputDir: META-INF/dekorate
+  dekorateMetaDir: ../.dekorate
+  buildInfo:
+    name: demo
+    version: 0.0.1-SNAPSHOT
+    packaging: jar
+    buildTool: maven
+    buildToolVersion: 3.6.3
+    outputFile: file:///home/sayed/github_repo/producer/target/demo-0.0.1-SNAPSHOT.jar
+    classOutputDir: file:///home/sayed/github_repo/producer/target/classes/
+    resourceDir: file:///home/sayed/github_repo/producer/target/classes/
+  scmInfo:
+    root: file:///home/sayed/github_repo/producer/
+    branch: develop
+    commit: 1b902abec416e6502a46cedd6113f5ad80289376
+    remote:
+      '[remote "origin"]': https://github.com/sayed-moin-ahmed/producer.git
