@@ -4,11 +4,11 @@
   "metadata" : {
     "annotations" : {
       "app.dekorate.io/vcs-url" : "<<unknown>>",
-      "app.dekorate.io/commit-id" : "708cb251619d230395e01d9191404c1ebaf42bbb"
+      "app.dekorate.io/commit-id" : "642b9f41aaadd3eea2c4cb420736f67d9bbed076"
     },
     "labels" : {
-      "app.kubernetes.io/name" : "demo",
-      "app.kubernetes.io/version" : "0.0.1-SNAPSHOT"
+      "app.kubernetes.io/version" : "0.0.1-SNAPSHOT",
+      "app.kubernetes.io/name" : "demo"
     },
     "name" : "demo"
   },
@@ -16,15 +16,15 @@
     "replicas" : 1,
     "selector" : {
       "matchLabels" : {
-        "app.kubernetes.io/name" : "demo",
-        "app.kubernetes.io/version" : "0.0.1-SNAPSHOT"
+        "app.kubernetes.io/version" : "0.0.1-SNAPSHOT",
+        "app.kubernetes.io/name" : "demo"
       }
     },
     "template" : {
       "metadata" : {
         "labels" : {
-          "app.kubernetes.io/name" : "demo",
-          "app.kubernetes.io/version" : "0.0.1-SNAPSHOT"
+          "app.kubernetes.io/version" : "0.0.1-SNAPSHOT",
+          "app.kubernetes.io/name" : "demo"
         }
       },
       "spec" : {
@@ -70,7 +70,7 @@
   "metadata" : {
     "annotations" : {
       "app.dekorate.io/vcs-url" : "<<unknown>>",
-      "app.dekorate.io/commit-id" : "708cb251619d230395e01d9191404c1ebaf42bbb"
+      "app.dekorate.io/commit-id" : "642b9f41aaadd3eea2c4cb420736f67d9bbed076"
     },
     "labels" : {
       "app.kubernetes.io/name" : "demo",

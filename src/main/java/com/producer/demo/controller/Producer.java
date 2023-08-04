@@ -2,6 +2,7 @@ package com.producer.demo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,9 +15,10 @@ public class Producer {
     @Autowired
     Publisher publisher;
 
-    @PostMapping
-    public void sendMessage(@RequestParam("topic") final String topic, @RequestParam("message") final String message){
-
+    @PostMapping("/publish")
+    public ResponseEntity.BodyBuilder sendMessage(@RequestParam("topic") final String topic, @RequestParam("message") final String message){
+        publisher.sendMessage(topic,message);
+        return ResponseEntity.ok();
     }
 
 
