@@ -4,25 +4,22 @@ kind: Deployment
 metadata:
   annotations:
     app.dekorate.io/vcs-url: <<unknown>>
-    app.dekorate.io/commit-id: 1b902abec416e6502a46cedd6113f5ad80289376
+    app.dekorate.io/commit-id: 708cb251619d230395e01d9191404c1ebaf42bbb
   labels:
-    app.kubernetes.io/version: 0.0.1-SNAPSHOT
     app.kubernetes.io/name: demo
+    app.kubernetes.io/version: 0.0.1-SNAPSHOT
   name: demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/version: 0.0.1-SNAPSHOT
       app.kubernetes.io/name: demo
+      app.kubernetes.io/version: 0.0.1-SNAPSHOT
   template:
     metadata:
-      annotations:
-        app.dekorate.io/vcs-url: <<unknown>>
-        app.dekorate.io/commit-id: 1b902abec416e6502a46cedd6113f5ad80289376
       labels:
-        app.kubernetes.io/version: 0.0.1-SNAPSHOT
         app.kubernetes.io/name: demo
+        app.kubernetes.io/version: 0.0.1-SNAPSHOT
     spec:
       containers:
         - env:
@@ -39,41 +36,22 @@ spec:
               scheme: HTTP
             successThreshold: 1
           name: demo
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
               port: 8080
               scheme: HTTP
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    app.dekorate.io/vcs-url: <<unknown>>
-    app.dekorate.io/commit-id: 28d9925b6afe50148a0e4782a2dfc85e08a60ccf
-  labels:
-    app.kubernetes.io/name: demo
-    app.kubernetes.io/version: 0.0.1-SNAPSHOT
-  name: demo
-spec:
-  rules:
-    - host: ""
-      http:
-        paths:
-          - backend:
-              service:
-                name: demo
-                port:
-                  name: http
-            path: /
-            pathType: Prefix
----
 apiVersion: v1
 kind: Service
 metadata:
   annotations:
     app.dekorate.io/vcs-url: <<unknown>>
-    app.dekorate.io/commit-id: 28d9925b6afe50148a0e4782a2dfc85e08a60ccf
+    app.dekorate.io/commit-id: 708cb251619d230395e01d9191404c1ebaf42bbb
   labels:
     app.kubernetes.io/name: demo
     app.kubernetes.io/version: 0.0.1-SNAPSHOT

@@ -16,7 +16,7 @@ project:
   scmInfo:
     root: file:///home/sayed/github_repo/producer/
     branch: develop
-    commit: 1b902abec416e6502a46cedd6113f5ad80289376
+    commit: 708cb251619d230395e01d9191404c1ebaf42bbb
     remote:
       '[remote "origin"]': https://github.com/sayed-moin-ahmed/producer.git
 partOf: null
@@ -25,6 +25,13 @@ version: 0.0.1-SNAPSHOT
 deploymentKind: Deployment
 workingDir: null
 serviceAccount: null
+ports:
+  - name: http
+    containerPort: 8080
+    hostPort: 80
+    nodePort: null
+    path: /v1
+    protocol: null
 serviceType: ClusterIP
 imagePullPolicy: IfNotPresent
 deploymentStrategy: None
