@@ -16,7 +16,7 @@ project:
   scmInfo:
     root: file:///home/sayed/github_repo/producer/
     branch: develop
-    commit: 642b9f41aaadd3eea2c4cb420736f67d9bbed076
+    commit: f0d7a012475e1e5d2ae3fd14fa39742f47805a76
     remote:
       '[remote "origin"]': https://github.com/sayed-moin-ahmed/producer.git
 partOf: null
